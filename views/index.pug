@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p#message
+  div(id="story") 
+  p(id="question")
+  div.form-group#form
+    form(onSubmit="return enterCommand()" method="post")
+      input#command.form-control(type='text', placeholder='>>' name='action' autofocus autocomplete="off")
+
+  script runGame();
